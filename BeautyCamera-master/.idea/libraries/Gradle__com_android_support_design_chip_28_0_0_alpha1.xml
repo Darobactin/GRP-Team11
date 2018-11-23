@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:design-chip-28.0.0-alpha1">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-chip-28.0.0-alpha1.aar/27cf8c1f4e17d0f646ff3d5452a7ae81/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-chip-28.0.0-alpha1.aar/27cf8c1f4e17d0f646ff3d5452a7ae81/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-chip-28.0.0-alpha1.aar/27cf8c1f4e17d0f646ff3d5452a7ae81/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/design-chip/28.0.0-alpha1/65125cd44e2078371119caf5edcb9c0b96ba7ecd/design-chip-28.0.0-alpha1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

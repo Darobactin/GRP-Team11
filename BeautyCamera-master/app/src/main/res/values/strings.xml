@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BeautyCamera</string>
+    <string name="beauty_camera">Take Photo</string>
+    <string name="select_photo">Select From Album</string>
+    <string name="swap">swap</string>
+    <string name="cat_ear">cat ear</string>
+    <string name="rabbit_ear">rabbit ear</string>
+    <string name="title_activity_main_edit">MainEditActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
