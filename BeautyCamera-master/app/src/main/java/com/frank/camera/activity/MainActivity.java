@@ -13,19 +13,20 @@ import com.frank.camera.R;
 public class MainActivity extends BaseActivity {
 
     private PermissionManager mPermissionManager;
-
-    // 要校验的权限
+    // permissions we need <要校验的权限>
     private final String[] PERMISSIONS = new String[]{Manifest.permission.CAMERA};
     // 识别请求码
     private final int REQUEST_CODE_DETECTION = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // initialize the application layout <初始化界面>
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         setContentView(R.layout.activity_main);
 
-        // 动态权限校验
+        // initialize the permission manager <初始化动态权限校验器>
         mPermissionManager = new PermissionManager(this) {
 
             @Override

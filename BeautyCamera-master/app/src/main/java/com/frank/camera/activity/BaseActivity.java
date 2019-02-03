@@ -15,7 +15,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * 显示缺少权限的对话框
+     * show permission dialog when needed <显示缺少权限的对话框>
      */
     protected void showPermissionDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
