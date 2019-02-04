@@ -4,7 +4,9 @@ Idea from:android-gpuimage
 
 Real-time Filter Camera&VideoRecorder And ImageEditor With Face Beauty For Android
 
-包含美颜等40余种实时滤镜相机，可拍照、录像、图片修改
+primitive author's blog [link](https://me.csdn.net/oShunz)
+
+
 
 \#Log:
 
@@ -20,6 +22,20 @@ Over 40 kinds of real-time filters
 
 Image editor with face beauty(Smooth Skin and White skin)
 
-This project is still under coding and will be updated later,only used eclipse because my computer too poor to run AS T-T
+This project is still under coding and will be updated
+
+[^Actually not. This is the last version :-(]: 
+
+, only used eclipse because my computer too poor to run AS T-T
 
 \#Click "Star" if this is helpful for you!
+
+
+
+2018-02-04
+
+Update tool chains
+
+Add OpenCV support
+
+Add photo select activity demo

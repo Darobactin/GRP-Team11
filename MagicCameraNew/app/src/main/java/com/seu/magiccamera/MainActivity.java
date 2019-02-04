@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.seu.magiccamera.activity.AlbumActivity;
 import com.seu.magiccamera.activity.CameraActivity;
 
+import org.opencv.android.OpenCVLoader;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -64,6 +66,8 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
                 albumTask();
             }
         });
+
+        initOpenCV();
     }
 
     /**
@@ -99,6 +103,15 @@ public class MainActivity extends Activity implements EasyPermissions.Permission
                 startActivity(new Intent(this, AlbumActivity.class));
             default:
                 break;
+        }
+    }
+
+    private void initOpenCV(){
+        boolean result = OpenCVLoader.initDebug();
+        if(result){
+            Log.i(TAG, "initOpenCV success...");
+        } else {
+            Log.e(TAG, "initOpenCV fail...");
         }
     }
 
