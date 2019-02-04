@@ -1,0 +1,18 @@
+{
+  "buildFiles": [
+    "D:\\AndroidSDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "D:\\AndroidSDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\debug\\x86 --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-x86": {
+      "artifactName": "native-lib",
+      "buildCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\debug\\x86 --target native-lib",
+      "abi": "x86",
+      "output": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\build\\intermediates\\cmake\\debug\\obj\\x86\\libnative-lib.so"
+    }
+  }
+}

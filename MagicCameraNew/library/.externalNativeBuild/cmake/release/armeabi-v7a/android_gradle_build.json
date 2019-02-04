@@ -1,0 +1,56 @@
+{
+  "stringTable": {
+    "0": "C:/Users/Piperacillin/Downloads/MagicCameraNew/library/.externalNativeBuild/cmake/release/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi23 --gcc-toolchain=D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 -Dnative_lib_EXPORTS --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -Oz -DNDEBUG -fPIC"
+  },
+  "buildFiles": [
+    "D:\\AndroidSDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "D:\\AndroidSDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-armeabi-v7a": {
+      "buildCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target native-lib",
+      "buildType": "release",
+      "toolchain": "3709352340",
+      "abi": "armeabi-v7a",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\src\\main\\cpp\\MagicJni.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\src\\main\\cpp\\beautify\\MagicBeautify.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\src\\main\\cpp\\bitmap\\BitmapOperation.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\src\\main\\cpp\\bitmap\\Conversion.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "3709352340": {
+      "cppCompilerExecutable": "D:\\AndroidSDK\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

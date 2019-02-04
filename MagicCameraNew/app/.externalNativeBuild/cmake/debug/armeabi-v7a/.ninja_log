@@ -1,0 +1,6 @@
+# ninja log v5
+3	58	0	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o	8ea329d34fe1bd8b
+1	82	0	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	273b23dff02d7048
+3	87	0	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o	c971875b2f68a67d
+4	125	0	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	3e579518b46df59e
+125	180	0	C:/Users/Piperacillin/Downloads/MagicCameraNew/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a6b77dc1b6cb51c

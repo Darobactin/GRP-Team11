@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-arm64-v8a": {
+      "artifactName": "native-lib",
+      "buildCommand": "D:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\arm64-v8a --target native-lib",
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libnative-lib.so"
+    }
+  }
+}
