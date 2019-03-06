@@ -1,14 +1,14 @@
-Executable : D:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe
+Executable : C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.6.4111459\bin\cmake.exe
 arguments : 
--HC:\Users\Piperacillin\Downloads\MagicCameraNew\library
--BC:\Users\Piperacillin\Downloads\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a
+-HC:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library
+-BC:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a
 -DANDROID_ABI=arm64-v8a
 -DANDROID_PLATFORM=android-23
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Piperacillin\Downloads\MagicCameraNew\app\build\intermediates\cmake\release\obj\arm64-v8a
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\build\intermediates\cmake\release\obj\arm64-v8a
 -DCMAKE_BUILD_TYPE=Release
--DANDROID_NDK=D:\AndroidSDK\ndk-bundle
--DCMAKE_TOOLCHAIN_FILE=D:\AndroidSDK\ndk-bundle\build\cmake\android.toolchain.cmake
--DCMAKE_MAKE_PROGRAM=D:\AndroidSDK\cmake\3.6.4111459\bin\ninja.exe
+-DANDROID_NDK=C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\ndk-bundle
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.6.4111459\bin\ninja.exe
 -GAndroid Gradle - Ninja
 jvmArgs : 
 

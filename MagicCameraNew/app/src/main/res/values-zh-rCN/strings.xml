@@ -53,4 +53,5 @@
     </string>
 	<string name="filter_catear">猫耳朵</string>
 	<string name="edit_title">编辑图片</string>
+	<string name="album_title">相册</string>
 </resources>

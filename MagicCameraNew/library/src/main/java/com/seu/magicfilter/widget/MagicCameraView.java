@@ -4,6 +4,10 @@
 package com.seu.magicfilter.widget;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -32,8 +36,21 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.EGL14;
 import android.opengl.GLES20;
+import android.opengl.GLException;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.SurfaceHolder;
+
+import org.opencv.android.Utils;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfRect;
+import org.opencv.core.Rect;
+import org.opencv.core.Scalar;
+import org.opencv.core.Size;
+import org.opencv.objdetect.CascadeClassifier;
+
+import duxiaoman.guofeng.myapplicationbeauty.R;
 
 /**
  * Created by why8222 on 2016/2/25.
@@ -55,9 +72,11 @@ public class MagicCameraView extends MagicBaseView {
     private static final int RECORDING_OFF = 0;
     private static final int RECORDING_ON = 1;
     private static final int RECORDING_RESUMED = 2;
+    private static final String TAG = "MagicCameraView";
     private static TextureMovieEncoder videoEncoder = new TextureMovieEncoder();
 
     private File outputFile;
+    private CascadeClassifier classifier;
 
     public MagicCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -66,6 +85,8 @@ public class MagicCameraView extends MagicBaseView {
         recordingStatus = -1;
         recordingEnabled = false;
         scaleType = ScaleType.CENTER_CROP;
+
+        loadCascadeClassifier();
     }
 
     @Override
@@ -96,6 +117,7 @@ public class MagicCameraView extends MagicBaseView {
 
     @Override
     public void onDrawFrame(GL10 gl) {
+        Log.i("MagicCameraView", "onDrawFrame");
         super.onDrawFrame(gl);
         if(surfaceTexture == null)
             return;
@@ -147,6 +169,19 @@ public class MagicCameraView extends MagicBaseView {
         }
         videoEncoder.setTextureId(id);
         videoEncoder.frameAvailable(surfaceTexture);
+
+        Bitmap bmp = createBitmapFromGLSurface(0, 0, surfaceWidth, surfaceHeight, gl);
+        Mat imgMat = new Mat(surfaceHeight, surfaceWidth, CvType.CV_8UC2, new Scalar(0));
+        //Mat temp = new Mat();
+        Utils.bitmapToMat(bmp, imgMat);
+        //Imgproc.cvtColor(imgMat, temp, Imgproc.COLOR_RGB2GRAY);
+        MatOfRect faceRectangles = new MatOfRect();
+        classifier.detectMultiScale(imgMat, faceRectangles, 1.1, 3, 2, new Size(50, 50), new Size());
+        Log.d(TAG, "detect " + faceRectangles.toArray().length + " faces");
+        for (Rect rect : faceRectangles.toArray()) {
+            Log.d(TAG, "( " + rect.tl().x + " , " + rect.tl().y + " ) , ( " + rect.br().x + " , " + rect.br().y + " )");
+        }
+
     }
 
     private SurfaceTexture.OnFrameAvailableListener onFrameAvailableListener = new SurfaceTexture.OnFrameAvailableListener() {
@@ -296,4 +331,63 @@ public class MagicCameraView extends MagicBaseView {
     public void onBeautyLevelChanged() {
         cameraInputFilter.onBeautyLevelChanged();
     }
+
+    private void loadCascadeClassifier() {
+        InputStream is = getResources().openRawResource(R.raw.haarcascade_frontalface_default);
+        File cascadeDir = getContext().getDir("cascade", Context.MODE_PRIVATE);
+        File mCascadeFile = new File(cascadeDir, "haarcascade_frontalface_default.xml");
+        try {
+            FileOutputStream os = new FileOutputStream(mCascadeFile);
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = is.read(buffer)) != -1) {
+                os.write(buffer, 0, bytesRead);
+            }
+            is.close();
+            os.close();
+
+            classifier = new CascadeClassifier(mCascadeFile.getAbsolutePath());
+            if (classifier.empty()) {
+                Log.e(TAG, "fail to load cascade classifier");
+                classifier = null;
+            } else {
+                Log.d(TAG, "successfully load cascade classifier");
+            }
+            cascadeDir.delete();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private Bitmap createBitmapFromGLSurface(int x, int y, int w, int h, GL10 gl) {
+        int bitmapBuffer[] = new int[w * h];
+        int bitmapSource[] = new int[w * h];
+        IntBuffer intBuffer = IntBuffer.wrap(bitmapBuffer);
+        intBuffer.position(0);
+        try {
+            gl.glReadPixels(x, y, w, h, GL10.GL_RGBA, GL10.GL_UNSIGNED_BYTE,
+                    intBuffer);
+            int offset1, offset2;
+            for (int i = 0; i < h; i++) {
+                offset1 = i * w;
+                offset2 = (h - i - 1) * w;
+                for (int j = 0; j < w; j++) {
+                    int texturePixel = bitmapBuffer[offset1 + j];
+                    /*int blue = (texturePixel >> 16) & 0xff;
+                    int red = (texturePixel << 16) & 0x00ff0000;
+                    int pixel = (texturePixel & 0xff00ff00) | red | blue;*/
+                    int red = (texturePixel << 16) & 0x00ff0000;
+                    bitmapSource[offset2 + j] = 0xff000000 | red | red >> 8 | red >> 16;
+                }
+            }
+        } catch (GLException e) {
+            return null;
+        }
+        return Bitmap.createBitmap(bitmapSource, w, h, Bitmap.Config.ARGB_8888);
+    }
+
 }

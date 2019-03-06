@@ -22,7 +22,7 @@ android {
 
     sourceSets {
         main {
-            jniLibs.srcDirs = ['../../jni']
+            jniLibs.srcDirs = ['jni']
             java.srcDirs = ['src']  // TODO Use original files instead of copied into build directory
             aidl.srcDirs = ['src']
             //res.srcDirs = ['/build/master_pack-android/opencv/modules/java/android_sdk/android_gradle_lib/res']

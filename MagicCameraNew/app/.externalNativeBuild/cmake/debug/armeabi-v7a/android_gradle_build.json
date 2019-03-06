@@ -2,58 +2,72 @@
 {
 	"buildFiles" : 
 	[
-		"C:/Users/Piperacillin/Downloads/MagicCameraNew/library/CMakeLists.txt"
+		"C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/CMakeLists.txt"
 	],
 	"cleanCommands" : 
 	[
-		"D:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target clean"
+		"C:\\Users\\10128\\Downloads\\android-sdk_r24.4.1-windows\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
 	{
+		"libopencv_java4-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "libopencv_java4",
+			"buildType" : "debug",
+			"output" : "../app/src/main/jniLibs/armeabi-v7a/libopencv_java4.so",
+			"toolchain" : "2803322849"
+		},
 		"native-lib-Debug-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "native-lib",
-			"buildCommand" : "D:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target native-lib",
+			"buildCommand" : "C:\\Users\\10128\\Downloads\\android-sdk_r24.4.1-windows\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\armeabi-v7a --target native-lib",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64  -Dnative_lib_EXPORTS  --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/MagicJni.cpp",
-					"workingDirectory" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -IC:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\app\\src\\main\\jniLibs\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/MagicJni.cpp",
+					"workingDirectory" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64  -Dnative_lib_EXPORTS  --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/beautify/MagicBeautify.cpp",
-					"workingDirectory" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -IC:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\app\\src\\main\\jniLibs\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64  -Dnative_lib_EXPORTS  --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/bitmap/BitmapOperation.cpp",
-					"workingDirectory" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -IC:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\app\\src\\main\\jniLibs\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/beautify/MagicBeautify.cpp",
+					"workingDirectory" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64  -Dnative_lib_EXPORTS  --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/bitmap/Conversion.cpp",
-					"workingDirectory" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -IC:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\app\\src\\main\\jniLibs\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/bitmap/BitmapOperation.cpp",
+					"workingDirectory" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi23 --gcc-toolchain=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dnative_lib_EXPORTS -IC:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\app\\src\\main\\jniLibs\\include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/bitmap/Conversion.cpp",
+					"workingDirectory" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/.externalNativeBuild/cmake/debug/armeabi-v7a"
 				}
 			],
-			"output" : "C:/Users/Piperacillin/Downloads/MagicCameraNew/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
-			"toolchain" : "3745389449"
+			"output" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so",
+			"toolchain" : "2803322849"
 		}
 	},
 	"toolchains" : 
 	{
-		"3745389449" : 
+		"2803322849" : 
 		{
-			"cCompilerExecutable" : "D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
-			"cppCompilerExecutable" : "D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+			"cCompilerExecutable" : "C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
 		}
 	}
 }

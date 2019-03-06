@@ -21,6 +21,12 @@
     gl_FragColor = vec4(texel, 1.0);*/
     vec4 originColor1 = texture2D(inputImageTexture, textureCoordinate);
     vec4 originColor2 = texture2D(inputImageTexture2, textureCoordinate2);
-    //gl_FragColor = originColor1 + originColor2;
-    gl_FragColor = originColor2;
+    vec4 combinedColor;
+    if (originColor2.a == 0.0) {
+        combinedColor = originColor1;
+    } else {
+        //originColor2.a = 0.5;
+        combinedColor = vec4(originColor2.rgb, 0.5);
+    }
+    gl_FragColor = combinedColor;
 }

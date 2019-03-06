@@ -1,0 +1,11 @@
+[1/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o
+[2/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o
+[3/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o
+[4/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o
+[5/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o
+C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\src\main\cpp\beautify\MagicBeautify.cpp:2:10: warning: non-portable path to file '"math.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "Math.h"
+         ^~~~~~~~
+         "math.h"
+1 warning generated.
+[6/6] Linking CXX shared library C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\build\intermediates\cmake\debug\obj\x86\libnative-lib.so

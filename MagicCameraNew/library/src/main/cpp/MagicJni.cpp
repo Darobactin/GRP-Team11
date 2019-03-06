@@ -31,7 +31,7 @@ Java_com_seu_magicfilter_beautify_MagicJni_jniStartWhiteSkin(JNIEnv *env, jobjec
 
 JNIEXPORT void JNICALL
 Java_com_seu_magicfilter_beautify_MagicJni_jniStartSkinSmooth(JNIEnv *env, jobject instance,
-                                                              jobject obj, jfloat DenoiseLevel){
+                                                              jfloat DenoiseLevel){
     float sigema = 10 + DenoiseLevel * DenoiseLevel * 5;
     MagicBeautify::getInstance()->startSkinSmooth(sigema);
 }

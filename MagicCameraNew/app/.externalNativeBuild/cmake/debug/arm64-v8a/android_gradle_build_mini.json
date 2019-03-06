@@ -1,16 +1,21 @@
 {
   "buildFiles": [
-    "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\CMakeLists.txt"
+    "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "D:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\arm64-v8a --target clean"
+    "C:\\Users\\10128\\Downloads\\android-sdk_r24.4.1-windows\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\arm64-v8a --target clean"
   ],
   "libraries": {
+    "libopencv_java4-Debug-arm64-v8a": {
+      "artifactName": "libopencv_java4",
+      "abi": "arm64-v8a",
+      "output": "..\\app\\src\\main\\jniLibs\\arm64-v8a\\libopencv_java4.so"
+    },
     "native-lib-Debug-arm64-v8a": {
       "artifactName": "native-lib",
-      "buildCommand": "D:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\arm64-v8a --target native-lib",
+      "buildCommand": "C:\\Users\\10128\\Downloads\\android-sdk_r24.4.1-windows\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\app\\.externalNativeBuild\\cmake\\debug\\arm64-v8a --target native-lib",
       "abi": "arm64-v8a",
-      "output": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libnative-lib.so"
+      "output": "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a\\libnative-lib.so"
     }
   }
 }

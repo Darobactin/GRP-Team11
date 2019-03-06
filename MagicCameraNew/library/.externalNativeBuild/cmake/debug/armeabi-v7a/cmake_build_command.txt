@@ -1,20 +1,20 @@
-Executable : D:\AndroidSDK\cmake\3.10.2.4988404\bin\cmake.exe
+Executable : C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.10.2.4988404\bin\cmake.exe
 arguments : 
--HC:\Users\Piperacillin\Downloads\MagicCameraNew\library
--BC:\Users\Piperacillin\Downloads\MagicCameraNew\library\.externalNativeBuild\cmake\debug\armeabi-v7a
+-HC:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library
+-BC:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\.externalNativeBuild\cmake\debug\armeabi-v7a
 -DANDROID_ABI=armeabi-v7a
 -DANDROID_PLATFORM=android-23
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Piperacillin\Downloads\MagicCameraNew\library\build\intermediates\cmake\debug\obj\armeabi-v7a
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\build\intermediates\cmake\debug\obj\armeabi-v7a
 -DCMAKE_BUILD_TYPE=Debug
--DANDROID_NDK=D:\AndroidSDK\ndk-bundle
+-DANDROID_NDK=C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\ndk-bundle
 -DCMAKE_CXX_FLAGS=
 -DCMAKE_SYSTEM_NAME=Android
 -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a
 -DCMAKE_SYSTEM_VERSION=23
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_ANDROID_NDK=D:\AndroidSDK\ndk-bundle
--DCMAKE_TOOLCHAIN_FILE=D:\AndroidSDK\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_ANDROID_NDK=C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\ndk-bundle
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\ndk-bundle\build\cmake\android.toolchain.cmake
 -G Ninja
--DCMAKE_MAKE_PROGRAM=D:\AndroidSDK\cmake\3.10.2.4988404\bin\ninja.exe
+-DCMAKE_MAKE_PROGRAM=C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.10.2.4988404\bin\ninja.exe
 jvmArgs : 
 

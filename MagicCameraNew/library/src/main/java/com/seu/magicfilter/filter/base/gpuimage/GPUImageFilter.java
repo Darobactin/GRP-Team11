@@ -15,6 +15,7 @@ import com.seu.magicfilter.utils.TextureRotationUtil;
 
 import android.graphics.PointF;
 import android.opengl.GLES20;
+import android.util.Log;
 
 public class GPUImageFilter {
     public static final String NO_FILTER_VERTEX_SHADER = "" +
@@ -108,6 +109,7 @@ public class GPUImageFilter {
 
     public int onDrawFrame(final int textureId, final FloatBuffer cubeBuffer,
                        final FloatBuffer textureBuffer) {
+        Log.i("GPUImageFilter", "onDrawFrame");
         GLES20.glUseProgram(mGLProgId);
         runPendingOnDrawTasks();
         if (!mIsInitialized) {

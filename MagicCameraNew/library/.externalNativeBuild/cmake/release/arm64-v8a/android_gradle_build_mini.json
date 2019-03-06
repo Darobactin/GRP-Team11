@@ -1,18 +1,18 @@
 {
   "buildFiles": [
-    "D:\\AndroidSDK\\ndk-bundle\\build\\cmake\\platforms.cmake",
-    "D:\\AndroidSDK\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
-    "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\CMakeLists.txt"
+    "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\..\\..\\android-sdk_r24.4.1-windows\\android-sdk-windows\\ndk-bundle\\build\\cmake\\platforms.cmake",
+    "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\CMakeLists.txt",
+    "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\..\\..\\android-sdk_r24.4.1-windows\\android-sdk-windows\\ndk-bundle\\build\\cmake\\android.toolchain.cmake"
   ],
   "cleanCommands": [
-    "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clean"
+    "C:\\Users\\10128\\Downloads\\android-sdk_r24.4.1-windows\\android-sdk-windows\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target clean"
   ],
   "libraries": {
     "native-lib-Release-arm64-v8a": {
       "artifactName": "native-lib",
-      "buildCommand": "D:\\AndroidSDK\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target native-lib",
+      "buildCommand": "C:\\Users\\10128\\Downloads\\android-sdk_r24.4.1-windows\\android-sdk-windows\\cmake\\3.10.2.4988404\\bin\\cmake.exe --build C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\.externalNativeBuild\\cmake\\release\\arm64-v8a --target native-lib",
       "abi": "arm64-v8a",
-      "output": "C:\\Users\\Piperacillin\\Downloads\\MagicCameraNew\\library\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\libnative-lib.so"
+      "output": "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\build\\intermediates\\cmake\\release\\obj\\arm64-v8a\\libnative-lib.so"
     }
   }
 }

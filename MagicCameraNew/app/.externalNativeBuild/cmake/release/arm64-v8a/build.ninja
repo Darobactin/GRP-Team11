@@ -32,32 +32,44 @@ include rules.ninja
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target native-lib
 
-build CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o: CXX_COMPILER__native-lib C$:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/MagicJni.cpp
+build CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o: CXX_COMPILER__native-lib C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/MagicJni.cpp
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\MagicJni.cpp.o.d
-  FLAGS = --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\Piperacillin\Downloads\MagicCameraNew\library\src\main\cpp\MagicJni.cpp
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
+  INCLUDES = -IC:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/../app/src/main/jniLibs/include
+  IN_ABS = C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\src\main\cpp\MagicJni.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
-build CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o: CXX_COMPILER__native-lib C$:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/beautify/MagicBeautify.cpp
+build CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o: CXX_COMPILER__native-lib C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/native-lib.cpp
+  DEFINES = -Dnative_lib_EXPORTS
+  DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\native-lib.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
+  INCLUDES = -IC:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/../app/src/main/jniLibs/include
+  IN_ABS = C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\src\main\cpp\native-lib.cpp
+  OBJECT_DIR = CMakeFiles\native-lib.dir
+  OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
+build CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o: CXX_COMPILER__native-lib C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/beautify/MagicBeautify.cpp
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\beautify\MagicBeautify.cpp.o.d
-  FLAGS = --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\Piperacillin\Downloads\MagicCameraNew\library\src\main\cpp\beautify\MagicBeautify.cpp
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
+  INCLUDES = -IC:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/../app/src/main/jniLibs/include
+  IN_ABS = C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\src\main\cpp\beautify\MagicBeautify.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\beautify
-build CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o: CXX_COMPILER__native-lib C$:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/bitmap/BitmapOperation.cpp
+build CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o: CXX_COMPILER__native-lib C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/bitmap/BitmapOperation.cpp
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\bitmap\BitmapOperation.cpp.o.d
-  FLAGS = --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\Piperacillin\Downloads\MagicCameraNew\library\src\main\cpp\bitmap\BitmapOperation.cpp
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
+  INCLUDES = -IC:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/../app/src/main/jniLibs/include
+  IN_ABS = C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\src\main\cpp\bitmap\BitmapOperation.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\bitmap
-build CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o: CXX_COMPILER__native-lib C$:/Users/Piperacillin/Downloads/MagicCameraNew/library/src/main/cpp/bitmap/Conversion.cpp
+build CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o: CXX_COMPILER__native-lib C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/src/main/cpp/bitmap/Conversion.cpp
   DEFINES = -Dnative_lib_EXPORTS
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\bitmap\Conversion.cpp.o.d
-  FLAGS = --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
-  IN_ABS = C:\Users\Piperacillin\Downloads\MagicCameraNew\library\src\main\cpp\bitmap\Conversion.cpp
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG  -fPIC
+  INCLUDES = -IC:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/../app/src/main/jniLibs/include
+  IN_ABS = C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\src\main\cpp\bitmap\Conversion.cpp
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp\bitmap
 
@@ -66,25 +78,25 @@ build CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o: CXX_COMPIL
 
 
 #############################################
-# Link the shared library C:\Users\Piperacillin\Downloads\MagicCameraNew\app\build\intermediates\cmake\release\obj\arm64-v8a\libnative-lib.so
+# Link the shared library C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\build\intermediates\cmake\release\obj\arm64-v8a\libnative-lib.so
 
-build C$:/Users/Piperacillin/Downloads/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o | D$:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/23/liblog.so D$:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libjnigraphics.so
-  LANGUAGE_COMPILE_FLAGS = --sysroot D:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG
+build C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o | ../app/src/main/jniLibs/arm64-v8a/libopencv_java4.so C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/23/liblog.so C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/23/libjnigraphics.so
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++  -O2 -DNDEBUG
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now
-  LINK_LIBRARIES = -llog -ljnigraphics -latomic -lm
+  LINK_LIBRARIES = ../app/src/main/jniLibs/arm64-v8a/libopencv_java4.so -llog -ljnigraphics -latomic -lm
   OBJECT_DIR = CMakeFiles\native-lib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   SONAME = libnative-lib.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = C:\Users\Piperacillin\Downloads\MagicCameraNew\app\build\intermediates\cmake\release\obj\arm64-v8a\libnative-lib.so
+  TARGET_FILE = C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\build\intermediates\cmake\release\obj\arm64-v8a\libnative-lib.so
   TARGET_PDB = native-lib.so.dbg
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Piperacillin\Downloads\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a && D:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a && C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -93,7 +105,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Piperacillin\Downloads\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a && D:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe -HC:\Users\Piperacillin\Downloads\MagicCameraNew\library -BC:\Users\Piperacillin\Downloads\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a"
+  COMMAND = cmd.exe /C "cd /D C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a && C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.6.4111459\bin\cmake.exe -HC:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library -BC:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\.externalNativeBuild\cmake\release\arm64-v8a"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -101,8 +113,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build libnative-lib.so: phony C$:/Users/Piperacillin/Downloads/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
-build native-lib: phony C$:/Users/Piperacillin/Downloads/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
+build libnative-lib.so: phony C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
+build native-lib: phony C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
 # =============================================================================
 # Folder targets.
 
@@ -114,7 +126,7 @@ build native-lib: phony C$:/Users/Piperacillin/Downloads/MagicCameraNew/app/buil
 #############################################
 # The main all target.
 
-build all: phony C$:/Users/Piperacillin/Downloads/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
+build all: phony C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so
 
 #############################################
 # Make the all target the default.
@@ -124,13 +136,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/Piperacillin/Downloads/MagicCameraNew/library/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake D$:/AndroidSDK/ndk-bundle/build/cmake/android.toolchain.cmake D$:/AndroidSDK/ndk-bundle/build/cmake/platforms.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/CMakeLists.txt C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/build/cmake/android.toolchain.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/Piperacillin/Downloads/MagicCameraNew/library/CMakeLists.txt CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake D$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake D$:/AndroidSDK/ndk-bundle/build/cmake/android.toolchain.cmake D$:/AndroidSDK/ndk-bundle/build/cmake/platforms.cmake: phony
+build C$:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/CMakeLists.txt C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/build/cmake/android.toolchain.cmake C$:/Users/10128/Downloads/android-sdk_r24.4.1-windows/android-sdk-windows/ndk-bundle/build/cmake/platforms.cmake CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake: phony
 
 #############################################
 # Clean all the built files.

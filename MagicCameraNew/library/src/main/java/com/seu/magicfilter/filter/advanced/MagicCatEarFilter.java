@@ -67,11 +67,17 @@ public class MagicCatEarFilter extends GPUImageFilter {
         setFloat(mGLStrengthLocation, 1.0f);//强度设定
         runOnDraw(new Runnable(){
             public void run(){
-                float[] sPos={
-                        -0.5f,  0.5f, 0.0f, // top left
-                        -0.5f, -0.5f, 0.0f, // bottom left
-                        0.5f, 0.5f, 0.0f, // bottom right
-                        0.5f, -0.5f, 0.0f  // top right
+                /*float[] sPos={
+                        0.0f, 1.0f, // top left
+                        1.0f, 1.0f, // bottom left
+                        0.0f, 0.0f, // bottom right
+                        1.0f, 0.0f  // top right
+                };*/
+                float[] sPos = {
+                        0.0f,0.0f,
+                        0.0f,0.75f,
+                        1.0f,0.0f,
+                        1.0f,0.75f
                 };
                 mGLTextureBuffer2 = ByteBuffer.allocateDirect(sPos.length * 4)
                         .order(ByteOrder.nativeOrder())

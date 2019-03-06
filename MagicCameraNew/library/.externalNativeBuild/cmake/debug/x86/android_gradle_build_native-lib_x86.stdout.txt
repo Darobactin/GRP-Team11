@@ -1,10 +1,11 @@
-[1/5] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o
-[2/5] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o
-[3/5] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o
-[4/5] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o
-C:\Users\Piperacillin\Documents\GRP\MagicCameraNew\library\src\main\cpp\beautify\MagicBeautify.cpp:2:10: warning: non-portable path to file '"math.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
-#include "Math.h"
-         ^~~~~~~~
-         "math.h"
-1 warning generated.
-[5/5] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\x86\libnative-lib.so
+[1/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o
+[2/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o
+[3/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o
+[4/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o
+../../../../src/main/cpp/beautify/MagicBeautify.cpp:2:10: warning: non-portable path to file '"math.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "Math.h"
+         ^~~~~~~~
+         "math.h"
+1 warning generated.
+[5/6] Building CXX object CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o
+[6/6] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\x86\libnative-lib.so
