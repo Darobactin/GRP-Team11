@@ -9,6 +9,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.ml.vision.FirebaseVision;
+import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector;
+import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 import com.seu.magiccamera.activity.AlbumActivity;
 import com.seu.magiccamera.activity.CameraActivity;
 

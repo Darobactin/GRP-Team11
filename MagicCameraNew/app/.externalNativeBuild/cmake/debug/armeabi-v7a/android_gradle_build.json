@@ -16,7 +16,7 @@
 			"abi" : "armeabi-v7a",
 			"artifactName" : "libopencv_java4",
 			"buildType" : "debug",
-			"output" : "../app/src/main/jniLibs/armeabi-v7a/libopencv_java4.so",
+			"output" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/../app/src/main/jniLibs/armeabi-v7a/libopencv_java4.so",
 			"toolchain" : "2803322849"
 		},
 		"native-lib-Debug-armeabi-v7a" : 

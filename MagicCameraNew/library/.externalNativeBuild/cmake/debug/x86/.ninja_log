@@ -11,3 +11,6 @@
 35	2413	573376928	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	7bc203f8c35cf64f
 41	5806	573376931	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	2400cb73a0abe01a
 5809	6197	573376931	../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so	dd8a7101e8fe78bc
+31	1146	573586891	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	73b25cdc9392fb56
+1147	1633	573586892	../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so	dd8a7101e8fe78bc
+8	272	574153349	../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so	dd8a7101e8fe78bc

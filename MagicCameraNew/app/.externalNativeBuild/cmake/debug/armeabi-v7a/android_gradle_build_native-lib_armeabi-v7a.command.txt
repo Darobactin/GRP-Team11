@@ -1,7 +1,7 @@
-Executable : D:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe
+Executable : C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.6.4111459\bin\cmake.exe
 arguments : 
 --build
-C:\Users\Piperacillin\Downloads\MagicCameraNew\app\.externalNativeBuild\cmake\debug\armeabi-v7a
+C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\.externalNativeBuild\cmake\debug\armeabi-v7a
 --target
 native-lib
 jvmArgs : 

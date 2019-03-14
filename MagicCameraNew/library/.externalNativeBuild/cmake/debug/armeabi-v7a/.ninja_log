@@ -1,6 +1,7 @@
 # ninja log v5
-3	263	570867969	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o	3a4d5e9d52d5c5de
-2	358	570867969	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	52aad5431d251641
-2	371	570867969	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o	9eef5d8aa34c8134
-0	396	570867969	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	47b016be0d06dca4
-396	501	570867970	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	f9b9adb8386c1acc
+17	632	573678133	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o	cf4ba67bef2eaee6
+10	911	573678133	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	7ad0ece8605ba078
+2	922	573678134	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	6cdf63817ab7cfdf
+13	936	573678134	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o	eedb3e9898a39a10
+7	4020	573678137	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	2db17ac1ebbc0f51
+5	170	573678338	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	ee8951ac7d5cf270

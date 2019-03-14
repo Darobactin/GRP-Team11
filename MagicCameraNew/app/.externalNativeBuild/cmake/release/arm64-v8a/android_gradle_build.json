@@ -16,7 +16,7 @@
 			"abi" : "arm64-v8a",
 			"artifactName" : "libopencv_java4",
 			"buildType" : "release",
-			"output" : "../app/src/main/jniLibs/arm64-v8a/libopencv_java4.so",
+			"output" : "C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/library/../app/src/main/jniLibs/arm64-v8a/libopencv_java4.so",
 			"toolchain" : "2803322849"
 		},
 		"native-lib-Release-arm64-v8a" : 

@@ -9,7 +9,7 @@
     "libopencv_java4-Release-x86_64": {
       "artifactName": "libopencv_java4",
       "abi": "x86_64",
-      "output": "..\\app\\src\\main\\jniLibs\\x86_64\\libopencv_java4.so"
+      "output": "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\app\\src\\main\\jniLibs\\x86_64\\libopencv_java4.so"
     },
     "native-lib-Release-x86_64": {
       "artifactName": "native-lib",

@@ -12,6 +12,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.util.ArrayList;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -23,6 +24,7 @@ import com.seu.magicfilter.filter.advanced.MagicBeautyFilter;
 import com.seu.magicfilter.filter.base.MagicCameraInputFilter;
 import com.seu.magicfilter.filter.helper.MagicFilterType;
 import com.seu.magicfilter.helper.SavePictureTask;
+import com.seu.magicfilter.utils.ContourDetector;
 import com.seu.magicfilter.utils.MagicParams;
 import com.seu.magicfilter.utils.OpenGlUtils;
 import com.seu.magicfilter.utils.Rotation;
@@ -45,9 +47,11 @@ import org.opencv.android.Utils;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
+import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
+import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
 
 import duxiaoman.guofeng.myapplicationbeauty.R;
@@ -77,6 +81,8 @@ public class MagicCameraView extends MagicBaseView {
 
     private File outputFile;
     private CascadeClassifier classifier;
+    public static ArrayList<double[]> faces = new ArrayList<>();
+    //private ContourDetector contourDetector;
 
     public MagicCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -87,6 +93,7 @@ public class MagicCameraView extends MagicBaseView {
         scaleType = ScaleType.CENTER_CROP;
 
         loadCascadeClassifier();
+        //contourDetector = new ContourDetector(false);
     }
 
     @Override
@@ -100,6 +107,7 @@ public class MagicCameraView extends MagicBaseView {
         if(cameraInputFilter == null)
             cameraInputFilter = new MagicCameraInputFilter();
         cameraInputFilter.init();
+        // this textureId represents the camera stream
         if (textureId == OpenGlUtils.NO_TEXTURE) {
             textureId = OpenGlUtils.getExternalOESTextureID();
             if (textureId != OpenGlUtils.NO_TEXTURE) {
@@ -162,6 +170,9 @@ public class MagicCameraView extends MagicBaseView {
         cameraInputFilter.setTextureTransformMatrix(mtx);
         int id = textureId;
         if(filter == null){
+            // textureId -> camera stream;
+            // gLCubeBuffer -> Coordinate defined from TextureRotationUtil.CUBE [8]
+            // gLTextureBuffer -> Coordinate defined from TextureRotationUtil.TEXTURE_NO_ROTATION [8]
             cameraInputFilter.onDrawFrame(textureId, gLCubeBuffer, gLTextureBuffer);
         }else{
             id = cameraInputFilter.onDrawToTexture(textureId);
@@ -172,15 +183,50 @@ public class MagicCameraView extends MagicBaseView {
 
         Bitmap bmp = createBitmapFromGLSurface(0, 0, surfaceWidth, surfaceHeight, gl);
         Mat imgMat = new Mat(surfaceHeight, surfaceWidth, CvType.CV_8UC2, new Scalar(0));
-        //Mat temp = new Mat();
         Utils.bitmapToMat(bmp, imgMat);
-        //Imgproc.cvtColor(imgMat, temp, Imgproc.COLOR_RGB2GRAY);
         MatOfRect faceRectangles = new MatOfRect();
-        classifier.detectMultiScale(imgMat, faceRectangles, 1.1, 3, 2, new Size(50, 50), new Size());
+        ArrayList<double[]> trans = new ArrayList<>();
+        classifier.detectMultiScale(imgMat, faceRectangles, 1.1, 3, 2, new Size(150, 150), new Size(400, 400));
+        for (Rect rect : faceRectangles.toArray()) {
+            double x1 = rect.tl().x;
+            double y1 = rect.tl().y;
+            double x2 = rect.br().x;
+            double y2 = rect.br().y;
+            double[] points = new double[4];
+            /*points[0] = -x1 / (x2 - x1);
+            points[1] = (y1 - surfaceHeight) / (y2 - y1);
+            points[2] = (surfaceWidth - x1) / (x2 - x1);
+            points[3] = y1 / (y2 - y1);*/
+            points[0] = -x1 / (x2 - x1);
+            points[1] = (surfaceHeight - y1) / (y2 - y1);
+            points[2] = (surfaceWidth - x1) / (x2 - x1);
+            points[3] = -y1 / (y2 - y1);
+            trans.add(points);
+        }
+        if (trans.size() != 0) {
+            faces = trans;
+        }
+
         Log.d(TAG, "detect " + faceRectangles.toArray().length + " faces");
         for (Rect rect : faceRectangles.toArray()) {
             Log.d(TAG, "( " + rect.tl().x + " , " + rect.tl().y + " ) , ( " + rect.br().x + " , " + rect.br().y + " )");
         }
+        /*contourDetector.detect(bmp);
+        ArrayList<double[]> trans = new ArrayList<>();
+        for (double[] rect : contourDetector.getRects()) {
+            double x1 = rect[0];
+            double y1 = rect[1];
+            double x2 = rect[2];
+            double y2 = rect[3];
+            double[] points = new double[4];
+            points[0] = -x1 / (x2 - x1);
+            points[1] = (y1 - surfaceHeight) / (y2 - y1);
+            points[2] = (surfaceWidth - x1) / (x2 - x1);
+            points[3] = y1 / (y2 - y1);
+            trans.add(points);
+
+        }
+        faces = trans;*/
 
     }
 

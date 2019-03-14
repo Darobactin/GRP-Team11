@@ -11,3 +11,5 @@
 14	531	0	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	a137f9a4fe7c65ab
 9	2810	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	ffb82d63298cab60
 2813	2977	0	C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	440f18d512534295
+9	212	0	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	b550917691f00bd2
+212	431	0	C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	440f18d512534295

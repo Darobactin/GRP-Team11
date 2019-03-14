@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "949653318452",
+    "firebase_url": "https://landmarkdetect-f024c.firebaseio.com",
+    "project_id": "landmarkdetect-f024c",
+    "storage_bucket": "landmarkdetect-f024c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949653318452:android:c3af91006336a99a",
+        "android_client_info": {
+          "package_name": "duxiaoman.guofeng.myapplicationbeauty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949653318452-knmijem84hh6d61nto25tju1m9p03hau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3-rIbKrehPATKbKO_ZAXs3cBZLr51EUM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

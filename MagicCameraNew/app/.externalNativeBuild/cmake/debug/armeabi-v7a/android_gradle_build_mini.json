@@ -9,7 +9,7 @@
     "libopencv_java4-Debug-armeabi-v7a": {
       "artifactName": "libopencv_java4",
       "abi": "armeabi-v7a",
-      "output": "..\\app\\src\\main\\jniLibs\\armeabi-v7a\\libopencv_java4.so"
+      "output": "C:\\Users\\10128\\Downloads\\MagicCameraNew\\MagicCameraNew\\library\\..\\app\\src\\main\\jniLibs\\armeabi-v7a\\libopencv_java4.so"
     },
     "native-lib-Debug-armeabi-v7a": {
       "artifactName": "native-lib",

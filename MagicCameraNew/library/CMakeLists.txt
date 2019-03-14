@@ -49,7 +49,7 @@ include_directories(../app/src/main/jniLibs/include)
 
 add_library(libopencv_java4 SHARED IMPORTED)
 set_target_properties(libopencv_java4 PROPERTIES IMPORTED_LOCATION
-        ${CMAKE_SOURCE_DIR}/../app/src/main/jniLibs/x86/libopencv_java4.so)
+        ${CMAKE_SOURCE_DIR}/../app/src/main/jniLibs/${ANDROID_ABI}/libopencv_java4.so)
 
 # Specifies libraries CMake should link to your target library. You
 # can link multiple libraries, such as libraries you define in this
