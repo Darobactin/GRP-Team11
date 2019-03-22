@@ -1,0 +1,7 @@
+# ninja log v5
+12	1080	574763022	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	16face0e087efcf2
+19	1106	574763022	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o	614d3be4e4f0404b
+16	1112	574763022	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o	b0e39113f9c6e604
+3	1241	574763022	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	7d7af2d87bebc8ea
+9	4846	574763026	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	43182cac431cc28f
+4849	5238	574763026	../../../../build/intermediates/cmake/release/obj/x86_64/libnative-lib.so	1544646f3f8ff927

@@ -1,5 +1,5 @@
 package com.seu.magicfilter.utils;
-
+/*
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.support.annotation.NonNull;
@@ -15,8 +15,8 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class ContourDetector {
+*/
+public class ContourDetector {/*
     private boolean isRealTime = true;
     private FirebaseVisionFaceDetectorOptions options;
     private FirebaseVisionImage image = null;
@@ -68,5 +68,5 @@ public class ContourDetector {
     public ArrayList<double[]> getRects() {
         return this.rects;
     }
-
+*/
 }

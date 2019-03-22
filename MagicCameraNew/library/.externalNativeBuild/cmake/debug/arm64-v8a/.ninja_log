@@ -1,6 +1,7 @@
 # ninja log v5
-24	217	0	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o	30aa060ed69b29ee
-52	218	0	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	d405444148b8d591
-45	235	0	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o	90abe7b5e99fd129
-34	238	0	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	295a0cf47904bdee
-238	596	0	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	13db660f90046e72
+19	478	574772895	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o	45280c632c4daffa
+3	557	574772895	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	82d0ebb456daa957
+16	567	574772895	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o	282c457e230a57a1
+12	596	574772896	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	3c059dcc655fe842
+8	4030	574772899	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	3084bc1812c75148
+4034	4629	574772900	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	30bd2b8f2a72c686

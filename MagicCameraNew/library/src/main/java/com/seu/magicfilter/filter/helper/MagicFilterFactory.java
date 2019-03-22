@@ -1,6 +1,7 @@
 package com.seu.magicfilter.filter.helper;
 
 import com.seu.magicfilter.filter.advanced.MagicAmaroFilter;
+import com.seu.magicfilter.filter.advanced.MagicAnimalEarFilter;
 import com.seu.magicfilter.filter.advanced.MagicAntiqueFilter;
 import com.seu.magicfilter.filter.advanced.MagicBlackCatFilter;
 import com.seu.magicfilter.filter.advanced.MagicBrannanFilter;
@@ -26,6 +27,7 @@ import com.seu.magicfilter.filter.advanced.MagicN1977Filter;
 import com.seu.magicfilter.filter.advanced.MagicNashvilleFilter;
 import com.seu.magicfilter.filter.advanced.MagicNostalgiaFilter;
 import com.seu.magicfilter.filter.advanced.MagicPixarFilter;
+import com.seu.magicfilter.filter.advanced.MagicRabbitEarFilter;
 import com.seu.magicfilter.filter.advanced.MagicRiseFilter;
 import com.seu.magicfilter.filter.advanced.MagicRomanceFilter;
 import com.seu.magicfilter.filter.advanced.MagicSakuraFilter;
@@ -142,6 +144,10 @@ public class MagicFilterFactory {
                 return new MagicSketchFilter();
             case CATEAR:
                 return new MagicCatEarFilter();
+            case RABBITEAR:
+                return new MagicRabbitEarFilter();
+            case ANIMALEAR:
+                return new MagicAnimalEarFilter();
                 //image adjust
             case BRIGHTNESS:
                 return new GPUImageBrightnessFilter();

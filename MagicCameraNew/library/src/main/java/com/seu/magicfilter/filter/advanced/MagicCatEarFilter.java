@@ -24,7 +24,13 @@ public class MagicCatEarFilter extends GPUImageFilter {
     private int[] inputTextureUniformLocations = {-1,-1,-1,-1};
     private int mGLStrengthLocation;
     private FloatBuffer mGLTextureBuffer2;
+    private FloatBuffer mGLTextureBuffer3;
+    private FloatBuffer mGLTextureBuffer4;
+    private FloatBuffer mGLTextureBuffer5;
     private int mGLAttribTextureCoordinate2;
+    private int mGLAttribTextureCoordinate3;
+    private int mGLAttribTextureCoordinate4;
+    private int mGLAttribTextureCoordinate5;
     private static final String TAG = "MagicCatEarFilter";
 
     public MagicCatEarFilter(){
@@ -66,6 +72,10 @@ public class MagicCatEarFilter extends GPUImageFilter {
             inputTextureUniformLocations[i] = GLES20.glGetUniformLocation(getProgram(), "inputImageTexture"+(2+i));
         mGLStrengthLocation = GLES20.glGetUniformLocation(mGLProgId, "strength");
         mGLAttribTextureCoordinate2 = GLES20.glGetAttribLocation(mGLProgId, "inputTextureCoordinate2");
+        mGLAttribTextureCoordinate3 = GLES20.glGetAttribLocation(mGLProgId, "inputTextureCoordinate3");
+        mGLAttribTextureCoordinate4 = GLES20.glGetAttribLocation(mGLProgId, "inputTextureCoordinate4");
+        mGLAttribTextureCoordinate5 = GLES20.glGetAttribLocation(mGLProgId, "inputTextureCoordinate5");
+
 
     }
 
@@ -99,28 +109,59 @@ public class MagicCatEarFilter extends GPUImageFilter {
     @Override
     public int onDrawFrame(final int textureId, final FloatBuffer cubeBuffer,
                            final FloatBuffer textureBuffer) {
-        float[] sPos = new float[8];
-        if (MagicCameraView.faces.size() == 0) {
-            /*for (int i = 0; i < 8; i++) {
-                sPos[i] = 0.0f;
-            }*/
+        int numFaces = 4 < MagicCameraView.faces.size() ? 4 : MagicCameraView.faces.size();
+        float[][] sPos = new float[4][8];
+        if (numFaces == 0) {
             return super.onDrawFrame(textureId, cubeBuffer, textureBuffer);
         } else {
-            sPos[0] = sPos[4] = (float) MagicCameraView.faces.get(0)[0];
-            sPos[1] = sPos[3] = (float) MagicCameraView.faces.get(0)[1];
-            sPos[2] = sPos[6] = (float) MagicCameraView.faces.get(0)[2];
-            sPos[5] = sPos[7] = (float) MagicCameraView.faces.get(0)[3];
+            for (int i = 0; i < numFaces; i++) {
+                sPos[i][0] = sPos[i][4] = (float) MagicCameraView.faces.get(i)[0];
+                sPos[i][1] = sPos[i][3] = (float) MagicCameraView.faces.get(i)[1];
+                sPos[i][2] = sPos[i][6] = (float) MagicCameraView.faces.get(i)[2];
+                sPos[i][5] = sPos[i][7] = (float) MagicCameraView.faces.get(i)[3];
+            }
+
+            for (int i = numFaces; i < 4; i++) {
+                for (int j = 0; j < 8; j++) {
+                    sPos[i][j] = 0;
+                }
+            }
+
         }
-        Log.d(TAG, sPos[0] + "," + sPos[1] + "," + sPos[2] + "," + sPos[3]+ "," + sPos[4] + "," + sPos[5] + "," + sPos[6] + "," + sPos[7]);
-        mGLTextureBuffer2 = ByteBuffer.allocateDirect(sPos.length * 4)
+        //Log.d(TAG, sPos[0] + "," + sPos[1] + "," + sPos[2] + "," + sPos[3]+ "," + sPos[4] + "," + sPos[5] + "," + sPos[6] + "," + sPos[7]);
+        mGLTextureBuffer2 = ByteBuffer.allocateDirect(sPos[0].length * 4)
                 .order(ByteOrder.nativeOrder())
                 .asFloatBuffer();
-        mGLTextureBuffer2.put(sPos).position(0);
+        mGLTextureBuffer2.put(sPos[0]).position(0);
         GLES20.glVertexAttribPointer(mGLAttribTextureCoordinate2, 2, GLES20.GL_FLOAT, false, 0,
                 mGLTextureBuffer2);
         GLES20.glEnableVertexAttribArray(mGLAttribTextureCoordinate2);
+        mGLTextureBuffer3 = ByteBuffer.allocateDirect(sPos[1].length * 4)
+                .order(ByteOrder.nativeOrder())
+                .asFloatBuffer();
+        mGLTextureBuffer3.put(sPos[1]).position(0);
+        GLES20.glVertexAttribPointer(mGLAttribTextureCoordinate3, 2, GLES20.GL_FLOAT, false, 0,
+                mGLTextureBuffer3);
+        GLES20.glEnableVertexAttribArray(mGLAttribTextureCoordinate3);
+        mGLTextureBuffer4 = ByteBuffer.allocateDirect(sPos[2].length * 4)
+                .order(ByteOrder.nativeOrder())
+                .asFloatBuffer();
+        mGLTextureBuffer4.put(sPos[2]).position(0);
+        GLES20.glVertexAttribPointer(mGLAttribTextureCoordinate4, 2, GLES20.GL_FLOAT, false, 0,
+                mGLTextureBuffer4);
+        GLES20.glEnableVertexAttribArray(mGLAttribTextureCoordinate4);
+        mGLTextureBuffer5 = ByteBuffer.allocateDirect(sPos[3].length * 4)
+                .order(ByteOrder.nativeOrder())
+                .asFloatBuffer();
+        mGLTextureBuffer5.put(sPos[3]).position(0);
+        GLES20.glVertexAttribPointer(mGLAttribTextureCoordinate5, 2, GLES20.GL_FLOAT, false, 0,
+                mGLTextureBuffer5);
+        GLES20.glEnableVertexAttribArray(mGLAttribTextureCoordinate5);
         int returnValue = super.onDrawFrame(textureId, cubeBuffer, textureBuffer);
         GLES20.glDisableVertexAttribArray(mGLAttribTextureCoordinate2);
+        GLES20.glDisableVertexAttribArray(mGLAttribTextureCoordinate3);
+        GLES20.glDisableVertexAttribArray(mGLAttribTextureCoordinate4);
+        GLES20.glDisableVertexAttribArray(mGLAttribTextureCoordinate5);
         return returnValue;
     }
 }

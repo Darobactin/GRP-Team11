@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<string name="app_name">魔幻相机</string>
     <string name="filter_none">原图</string>
+	<string name="filter_amaro">酷烈</string>
+	<string name="filter_brannan">布拉南</string>
+	<string name="filter_brooklyn">布鲁克林</string>
+	<string name="filter_Earlybird">早鸟</string>
+	<string name="filter_freud">弗洛伊德</string>
+	<string name="filter_hefe">酵母</string>
+	<string name="filter_hudson">哈德逊湾</string>
+	<string name="filter_inkwell">墨水</string>
+	<string name="filter_kevin">凯文</string>
+	<string name="filter_lomo">Lomo</string>
+	<string name="filter_n1977">1977</string>
+	<string name="filter_nashville">Nashville</string>
+	<string name="filter_pixar">Pixar</string>
+	<string name="filter_rise">Rise</string>
+	<string name="filter_sierra">Sierra</string>
+	<string name="filter_sutro">Sutro</string>
+	<string name="filter_toastero">Toaster2</string>
+	<string name="filter_valencia">Valencia</string>
+	<string name="filter_walden">Walden</string>
+	<string name="filter_xproii">XproII</string>
 	<string name="filter_whitecat">白猫</string>
 	<string name="filter_blackcat">黑猫</string>
 	<string name="filter_romance">浪漫</string>
@@ -38,7 +59,7 @@
 	<string name="edit_brightness">亮度</string>
 	<string name="edit_hue">色调</string>
 
-	<string name="rationale_camera">魔幻相机需要访问您的设备相机.</string>
+	<string name="rationale_camera">魔幻相机需要访问您的设备相机和网络.</string>
 	<string name="rationale_read_external_storage">魔幻相机需要访问您的内部存储.</string>
 	<string name="rationale_write_external_storage">魔幻相机需要读写您的内部存储.</string>
 	<string name="yes">是</string>
@@ -52,6 +73,8 @@
         \n写入内部存储: %s
     </string>
 	<string name="filter_catear">猫耳朵</string>
+	<string name="filter_rabbitear">兔耳朵</string>
 	<string name="edit_title">编辑图片</string>
 	<string name="album_title">相册</string>
+	<string name="filter_animalear">尖耳朵</string>
 </resources>

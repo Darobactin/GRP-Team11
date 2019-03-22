@@ -1,0 +1,1 @@
+[1/1] Linking CXX shared library C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\app\build\intermediates\cmake\release\obj\x86\libnative-lib.so

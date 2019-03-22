@@ -1,0 +1,10 @@
+# ninja log v5
+1	326	0	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/Conversion.cpp.o	7c80dfdfef4f982d
+18	433	0	CMakeFiles/native-lib.dir/src/main/cpp/MagicJni.cpp.o	ede6b8825caa9259
+11	443	0	CMakeFiles/native-lib.dir/src/main/cpp/bitmap/BitmapOperation.cpp.o	75be4283a92fb6e8
+6	527	0	CMakeFiles/native-lib.dir/src/main/cpp/beautify/MagicBeautify.cpp.o	134931541cacb0ed
+14	2948	0	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	b2e2e1dcbabf30ec
+2951	3165	0	C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so	22251970264e94f5
+6	337	0	C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so	22251970264e94f5
+6	2203	0	C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so	22251970264e94f5
+6	160	0	C:/Users/10128/Downloads/MagicCameraNew/MagicCameraNew/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so	22251970264e94f5

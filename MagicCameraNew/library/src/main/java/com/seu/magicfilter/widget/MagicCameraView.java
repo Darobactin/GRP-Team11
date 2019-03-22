@@ -3,6 +3,7 @@
  */
 package com.seu.magicfilter.widget;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -13,10 +14,16 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import com.megvii.facepp.api.FacePPApi;
+import com.megvii.facepp.api.IFacePPCallBack;
+import com.megvii.facepp.api.bean.DetectResponse;
+import com.megvii.facepp.api.bean.Face;
 import com.seu.magicfilter.camera.CameraEngine;
 import com.seu.magicfilter.camera.utils.CameraInfo;
 import com.seu.magicfilter.encoder.video.TextureMovieEncoder;
@@ -24,7 +31,6 @@ import com.seu.magicfilter.filter.advanced.MagicBeautyFilter;
 import com.seu.magicfilter.filter.base.MagicCameraInputFilter;
 import com.seu.magicfilter.filter.helper.MagicFilterType;
 import com.seu.magicfilter.helper.SavePictureTask;
-import com.seu.magicfilter.utils.ContourDetector;
 import com.seu.magicfilter.utils.MagicParams;
 import com.seu.magicfilter.utils.OpenGlUtils;
 import com.seu.magicfilter.utils.Rotation;
@@ -82,7 +88,7 @@ public class MagicCameraView extends MagicBaseView {
     private File outputFile;
     private CascadeClassifier classifier;
     public static ArrayList<double[]> faces = new ArrayList<>();
-    //private ContourDetector contourDetector;
+    private FacePPApi faceppApi = new FacePPApi("T5gSCLVBrjlSNSCjNghJKALaQBcX9pBg", "E9HE2nhuxgjhtZJLtdn6YYszViOFh2gg");
 
     public MagicCameraView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -169,38 +175,86 @@ public class MagicCameraView extends MagicBaseView {
         surfaceTexture.getTransformMatrix(mtx);
         cameraInputFilter.setTextureTransformMatrix(mtx);
         int id = textureId;
+        final byte[] array;
         if(filter == null){
             // textureId -> camera stream;
             // gLCubeBuffer -> Coordinate defined from TextureRotationUtil.CUBE [8]
             // gLTextureBuffer -> Coordinate defined from TextureRotationUtil.TEXTURE_NO_ROTATION [8]
             cameraInputFilter.onDrawFrame(textureId, gLCubeBuffer, gLTextureBuffer);
+            array = createByteArrayFromGLSurface(0, 0, surfaceWidth, surfaceHeight, gl);
         }else{
             id = cameraInputFilter.onDrawToTexture(textureId);
             filter.onDrawFrame(id, gLCubeBuffer, gLTextureBuffer);
+            array = createByteArrayFromGLSurface(0, 0, surfaceWidth, surfaceHeight, gl);
+
         }
         videoEncoder.setTextureId(id);
         videoEncoder.frameAvailable(surfaceTexture);
 
-        Bitmap bmp = createBitmapFromGLSurface(0, 0, surfaceWidth, surfaceHeight, gl);
+        final Map<String, String> params = new HashMap<>();
+        params.put("return_landmark", "2");
+        params.put("return_attributes", "gender,age,smiling,emotion,ethnicity,beauty");
+        new Runnable() {
+            @Override
+            public void run() {
+                faceppApi.detect(params, array,
+                        new IFacePPCallBack<DetectResponse>() {
+                            @Override
+                            public void onSuccess(DetectResponse detectResponse) {
+                                ArrayList<double[]> trans = new ArrayList<>();
+                                for (Face face : detectResponse.getFaces()) {
+                                    double leX = face.getLandmark().getLeft_eye_center().getX();
+                                    double leY = face.getLandmark().getLeft_eye_center().getY();
+                                    double reX = face.getLandmark().getRight_eye_center().getX();
+                                    double reY = face.getLandmark().getRight_eye_center().getY();
+                                    double ecX = (leX + reX) / 2;
+                                    double ecY = (leY + reY) / 2;
+                                    double D = 2.2 * Math.sqrt(Math.pow(leX - reX, 2) + Math.pow(leY - reY, 2));
+                                    double x1 = ecX - 0.5 * D;
+                                    double y1 = ecY - D;
+                                    double x2 = ecX + 0.5 * D;
+                                    double y2 = ecY;
+                                    Log.d(TAG, "( " + leX + " , " + leY + " ) , ( " + reX + " , " + reY + " )");
+                            /*double x1 = face.getFace_rectangle().getLeft();
+                            double y1 = face.getFace_rectangle().getTop();
+                            double x2 = face.getFace_rectangle().getLeft() + face.getFace_rectangle().getWidth();
+                            double y2 = face.getFace_rectangle().getTop() + face.getFace_rectangle().getHeight();*/
+                                    double[] points = new double[4];
+                                    Log.d(TAG, "( " + x1 + " , " + y1 + " ) , ( " + x2 + " , " + y2 + " )");
+                                    points[0] = -x1 / (x2 - x1);
+                                    points[1] = (surfaceHeight - y1) / (y2 - y1);
+                                    points[2] = (surfaceWidth - x1) / (x2 - x1);
+                                    points[3] = -y1 / (y2 - y1);
+                                    trans.add(points);
+                                }
+                                if (trans.size() != 0) {
+                                    faces = trans;
+                                }
+                            }
+                            @Override
+                            public void onFailed(String s) {
+                                Log.e(TAG, "Fail to get faces");
+                            }
+                        });
+            }
+        }.run();
+
+        /*Bitmap bmp = createBitmapFromGLSurface(0, 0, surfaceWidth, surfaceHeight, gl);
         Mat imgMat = new Mat(surfaceHeight, surfaceWidth, CvType.CV_8UC2, new Scalar(0));
         Utils.bitmapToMat(bmp, imgMat);
         MatOfRect faceRectangles = new MatOfRect();
         ArrayList<double[]> trans = new ArrayList<>();
-        classifier.detectMultiScale(imgMat, faceRectangles, 1.1, 3, 2, new Size(150, 150), new Size(400, 400));
+        classifier.detectMultiScale(imgMat, faceRectangles, 1.3, 3, 2, new Size(250, 250), new Size());
         for (Rect rect : faceRectangles.toArray()) {
             double x1 = rect.tl().x;
             double y1 = rect.tl().y;
             double x2 = rect.br().x;
             double y2 = rect.br().y;
             double[] points = new double[4];
-            /*points[0] = -x1 / (x2 - x1);
-            points[1] = (y1 - surfaceHeight) / (y2 - y1);
-            points[2] = (surfaceWidth - x1) / (x2 - x1);
-            points[3] = y1 / (y2 - y1);*/
             points[0] = -x1 / (x2 - x1);
-            points[1] = (surfaceHeight - y1) / (y2 - y1);
+            points[1] = (surfaceHeight - y1) / (y2 - y1) + 0.45;
             points[2] = (surfaceWidth - x1) / (x2 - x1);
-            points[3] = -y1 / (y2 - y1);
+            points[3] = -y1 / (y2 - y1) + 0.45;
             trans.add(points);
         }
         if (trans.size() != 0) {
@@ -210,7 +264,7 @@ public class MagicCameraView extends MagicBaseView {
         Log.d(TAG, "detect " + faceRectangles.toArray().length + " faces");
         for (Rect rect : faceRectangles.toArray()) {
             Log.d(TAG, "( " + rect.tl().x + " , " + rect.tl().y + " ) , ( " + rect.br().x + " , " + rect.br().y + " )");
-        }
+        }*/
         /*contourDetector.detect(bmp);
         ArrayList<double[]> trans = new ArrayList<>();
         for (double[] rect : contourDetector.getRects()) {
@@ -227,6 +281,7 @@ public class MagicCameraView extends MagicBaseView {
 
         }
         faces = trans;*/
+
 
     }
 
@@ -353,7 +408,9 @@ public class MagicCameraView extends MagicBaseView {
             beautyFilter.onDrawFrame(textureId, gLCubeBuffer, gLTextureBuffer);
         }else{
             beautyFilter.onDrawFrame(textureId);
-            filter.onDrawFrame(mFrameBufferTextures[0], gLCubeBuffer, gLTextureBuffer);
+            //filter.onDrawFrame(mFrameBufferTextures[0], gLCubeBuffer, gLTextureBuffer);
+            filter.onDrawFrame(textureId, gLCubeBuffer, gLTextureBuffer);
+            //filter.onDrawFrame(textureId, this.gLCubeBuffer, this.gLTextureBuffer);
         }
         IntBuffer ib = IntBuffer.allocate(width * height);
         GLES20.glReadPixels(0, 0, width, height, GLES20.GL_RGBA, GLES20.GL_UNSIGNED_BYTE, ib);
@@ -423,7 +480,7 @@ public class MagicCameraView extends MagicBaseView {
                 offset2 = (h - i - 1) * w;
                 for (int j = 0; j < w; j++) {
                     int texturePixel = bitmapBuffer[offset1 + j];
-                    /*int blue = (texturePixel >> 16) & 0xff;
+                    /*int blue = (texturePixel >> 16) & 0xff; (use green channel)
                     int red = (texturePixel << 16) & 0x00ff0000;
                     int pixel = (texturePixel & 0xff00ff00) | red | blue;*/
                     int red = (texturePixel << 16) & 0x00ff0000;
@@ -434,6 +491,36 @@ public class MagicCameraView extends MagicBaseView {
             return null;
         }
         return Bitmap.createBitmap(bitmapSource, w, h, Bitmap.Config.ARGB_8888);
+    }
+
+    private byte[] createByteArrayFromGLSurface(int x, int y, int w, int h, GL10 gl) {
+        int bitmapBuffer[] = new int[w * h];
+        int bitmapSource[] = new int[w * h];
+        IntBuffer intBuffer = IntBuffer.wrap(bitmapBuffer);
+        intBuffer.position(0);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        try {
+            gl.glReadPixels(x, y, w, h, GL10.GL_RGBA, GL10.GL_UNSIGNED_BYTE,
+                    intBuffer);
+            int offset1, offset2;
+            for (int i = 0; i < h; i++) {
+                offset1 = i * w;
+                offset2 = (h - i - 1) * w;
+                for (int j = 0; j < w; j++) {
+                    int texturePixel = bitmapBuffer[offset1 + j];
+                    int blue = (texturePixel >> 16) & 0xff;
+                    int red = (texturePixel << 16) & 0x00ff0000;
+                    int pixel = (texturePixel & 0xff00ff00) | red | blue;
+                    bitmapSource[offset2 + j] = pixel;
+                }
+            }
+
+            Bitmap bitmap = Bitmap.createBitmap(bitmapSource, w, h, Bitmap.Config.ARGB_8888);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 80, baos);
+        } catch (GLException e) {
+            return null;
+        }
+        return baos.toByteArray();
     }
 
 }

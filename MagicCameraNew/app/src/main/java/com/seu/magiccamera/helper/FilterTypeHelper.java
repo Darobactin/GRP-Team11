@@ -23,6 +23,8 @@ public class FilterTypeHelper {
             case FAIRYTALE:
                 return R.color.filter_color_blue;
             case CATEAR:
+            case RABBITEAR:
+            case ANIMALEAR:
             case ROMANCE:
             case SAKURA:
             case WARM:
@@ -88,6 +90,8 @@ public class FilterTypeHelper {
             case FREUD:
                 return R.drawable.filter_thumb_freud;
             case CATEAR:
+            case RABBITEAR:
+            case ANIMALEAR:
             case HEFE:
                 return R.drawable.filter_thumb_hefe;
             case HUDSON:
@@ -245,6 +249,10 @@ public class FilterTypeHelper {
                 return R.string.filter_sketch;
             case CATEAR:
                 return R.string.filter_catear;
+            case RABBITEAR:
+                return R.string.filter_rabbitear;
+            case ANIMALEAR:
+                return R.string.filter_animalear;
             default:
                 return R.string.filter_none;
         }

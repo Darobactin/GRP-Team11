@@ -60,7 +60,7 @@
 	<string name="edit_brightness">Bright</string>
 	<string name="edit_hue">Hue</string>
 
-	<string name="rationale_camera">This app needs access to your camera so you can take pictures.</string>
+	<string name="rationale_camera">This app needs access to your camera and Internet so you can take pictures.</string>
 	<string name="rationale_read_external_storage">This app needs access to your storage so you can load pictures.</string>
 	<string name="rationale_write_external_storage">This app needs access to your storage so you can store pictures.</string>
 	<string name="yes">Yes</string>
@@ -76,4 +76,6 @@
     <string name="filter_catear">CatEar</string>
     <string name="edit_title">Edit Image</string>
 	<string name="album_title">Album</string>
+	<string name="filter_rabbitear">RabbitEar</string>
+	<string name="filter_animalear">AnimalEar</string>
 </resources>

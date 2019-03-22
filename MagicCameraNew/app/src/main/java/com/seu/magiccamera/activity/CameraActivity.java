@@ -60,6 +60,9 @@ public class CameraActivity extends Activity{
 
     private final MagicFilterType[] types = new MagicFilterType[]{
             MagicFilterType.NONE,
+            MagicFilterType.CATEAR,
+            MagicFilterType.RABBITEAR,
+            MagicFilterType.ANIMALEAR,
             MagicFilterType.FAIRYTALE,
             MagicFilterType.SUNRISE,
             MagicFilterType.SUNSET,
@@ -101,7 +104,7 @@ public class CameraActivity extends Activity{
             MagicFilterType.VALENCIA,
             MagicFilterType.WALDEN,
             MagicFilterType.XPROII,
-            MagicFilterType.CATEAR
+
     };
 
     /**

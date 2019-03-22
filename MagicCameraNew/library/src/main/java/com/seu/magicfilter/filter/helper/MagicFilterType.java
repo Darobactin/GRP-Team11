@@ -54,5 +54,7 @@ public enum  MagicFilterType {
     SATURATION,
     SHARPEN,
     IMAGE_ADJUST,
-    CATEAR
+    CATEAR,
+    RABBITEAR,
+    ANIMALEAR
 }

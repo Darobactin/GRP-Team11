@@ -1,0 +1,8 @@
+Executable : C:\Users\10128\Downloads\android-sdk_r24.4.1-windows\android-sdk-windows\cmake\3.10.2.4988404\bin\cmake.exe
+arguments : 
+--build
+C:\Users\10128\Downloads\MagicCameraNew\MagicCameraNew\library\.externalNativeBuild\cmake\release\x86_64
+--target
+native-lib
+jvmArgs : 
+
